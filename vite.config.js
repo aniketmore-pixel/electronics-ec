@@ -33,7 +33,7 @@ export default defineConfig({
         ],
         icons: [
           {
-            src: 'favicon.ico',
+            src: 'laptop.png',
             sizes: '128x128',
             type: 'image/png'
           },
