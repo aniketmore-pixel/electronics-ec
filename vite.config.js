@@ -17,6 +17,20 @@ export default defineConfig({
         background_color: '#ffffff',
         display: 'standalone',
         start_url: '/',
+        screenshots: [
+        {
+          "src": "/screenshots/desktop-screenshot.png",
+          "sizes": "1920x1080",
+          "type": "image/png",
+          "form_factor": "wide"
+        },
+        {
+          "src": "/screenshots/mobile-screenshot.png",
+          "sizes": "375x812",
+          "type": "image/png",
+          "form_factor": "narrow"
+        }
+        ],
         icons: [
           {
             src: 'favicon.ico',
