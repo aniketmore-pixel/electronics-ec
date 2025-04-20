@@ -10,6 +10,7 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
       manifest: {
+        id: '/',
         name: 'NextGadget',
         short_name: 'ShopApp',
         description: 'A PWA for buying electronics online',
