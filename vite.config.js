@@ -10,9 +10,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
       manifest: {
-        name: 'My E-Commerce App',
+        name: 'NextGadget',
         short_name: 'ShopApp',
-        description: 'A simple PWA e-commerce app',
+        description: 'A PWA for buying electronics online',
         theme_color: '#ffffff',
         background_color: '#ffffff',
         display: 'standalone',
@@ -27,7 +27,7 @@ export default defineConfig({
         {
           "src": "/screenshots/mobile-screenshot.png",
           "sizes": "375x812",
-          "type": "image/jpg",
+          "type": "image/jpeg",
           "form_factor": "narrow"
         }
         ],
