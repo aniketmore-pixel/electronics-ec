@@ -27,7 +27,7 @@ export default defineConfig({
         {
           "src": "/screenshots/mobile-screenshot.png",
           "sizes": "375x812",
-          "type": "image/png",
+          "type": "image/jpg",
           "form_factor": "narrow"
         }
         ],
@@ -37,6 +37,12 @@ export default defineConfig({
             sizes: '128x128',
             type: 'image/png'
           },
+          {
+            "src": "laptop-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+          }
         ]
       }
     })
