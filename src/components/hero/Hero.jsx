@@ -72,7 +72,7 @@ const Hero = () => {
                   <div className="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2">
                      <img
                         className="w-full h-full lg:max-w-3xl"
-                        src="https://merakiui.com/images/components/Catalogue-pana.svg"
+                        src="Web devices-amico.svg"
                         alt="Catalogue-pana.svg"
                      />
                   </div>
