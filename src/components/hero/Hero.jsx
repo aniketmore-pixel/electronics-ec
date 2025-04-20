@@ -2,7 +2,7 @@ import hero from "../../assets/hero3.png";
 import { Link } from "react-router-dom";
 import { TbArrowNarrowRight } from "react-icons/tb";
 import { useEffect, useState } from "react";
-const tags = ["Mobiles", "Electronics", "Bags", "Clothes", "Jwellery"];
+const tags = ["Smartphones", "Laptops", "Smartwatches", "Cameras", "Bluetooth Speakers"];
 
 let currentIndex = 0;
 const Hero = () => {
@@ -56,9 +56,9 @@ const Hero = () => {
                         </p>
 
                         <p className="mt-3 text-gray-600 dark:text-gray-400">
-                           Lorem ipsum dolor sit amet, consectetur adipisicing
-                           elit. Porro beatae error laborum ab amet sunt
-                           recusandae? Reiciendis natus perspiciatis optio.
+                           Discover the Latest in Tech
+                           Shop top-rated electronics at unbeatable prices.
+                           Fast delivery, easy returns, and 24/7 support—shop smart, shop here.
                         </p>
 
                         <Link to="/all">
