@@ -27,7 +27,7 @@ export default defineConfig({
         {
           "src": "/screenshots/mobile-screenshot.png",
           "sizes": "375x812",
-          "type": "image/jpeg",
+          "type": "image/png",
           "form_factor": "narrow"
         }
         ],
