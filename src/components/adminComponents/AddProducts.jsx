@@ -34,26 +34,28 @@ const AddProducts = () => {
   //! File Upload to FireStorage
   function handleImageChange(e) {
     const file = e.target.files[0];
-    const storageRef = ref(storage, `images/${Date.now()}${file.name}`);
-    const uploadTask = uploadBytesResumable(storageRef, file);
-    uploadTask.on(
-      "state_changed",
-      (snapshot) => {
-        const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-        setUploadProgress(progress);
-      },
-      (error) => {
-        toast.error(error.code, error.message);
-      },
-      () => {
-        // Handle successful uploads on complete
-        getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-          setProduct({ ...product, imageURL: downloadURL });
-          toast.success("File Uploaded Successfully");
-        });
-      }
-    );
+    const formData = new FormData();
+    formData.append("file", file);
+    formData.append("upload_preset", "nextgadget"); // set this in Cloudinary
+    formData.append("cloud_name", "dyd9xroga");
+  
+    setUploadProgress(0);
+  
+    fetch("https://api.cloudinary.com/v1_1/dyd9xroga/image/upload", {
+      method: "POST",
+      body: formData,
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setProduct((prev) => ({ ...prev, imageURL: data.secure_url }));
+        toast.success("File Uploaded Successfully");
+        setUploadProgress(100);
+      })
+      .catch((err) => {
+        toast.error("Upload failed", err.message);
+      });
   }
+  
   //! Add Product to Firebase
   async function addProduct(e) {
     e.preventDefault();
